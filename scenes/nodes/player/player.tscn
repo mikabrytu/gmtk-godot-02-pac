@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bamf0c42wom75"]
+
+[ext_resource type="Script" path="res://scenes/nodes/player/player.gd" id="1_42rfm"]
+[ext_resource type="Texture2D" uid="uid://ok04k5p0i7m7" path="res://art/tilemap_packed.png" id="1_fo2no"]
+
+[node name="Player" type="Node2D"]
+scale = Vector2(2, 2)
+script = ExtResource("1_42rfm")
+speed = 1.0
+direction = Vector2i(1, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_fo2no")
+region_enabled = true
+region_rect = Rect2(32, 128, 16, 16)

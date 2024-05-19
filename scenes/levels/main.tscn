@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://yerpn1k87ymc"]
+
+[ext_resource type="PackedScene" uid="uid://1x7cvpla8w4b" path="res://scenes/nodes/board/board.tscn" id="1_j340u"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Board" parent="." instance=ExtResource("1_j340u")]
+position = Vector2(93, 87)
+scale = Vector2(2.48, 2.48)

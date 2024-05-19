@@ -1,14 +1,42 @@
-[gd_scene load_steps=3 format=3 uid="uid://bamf0c42wom75"]
+[gd_scene load_steps=5 format=3 uid="uid://bamf0c42wom75"]
 
 [ext_resource type="Script" path="res://scenes/nodes/player/player.gd" id="1_42rfm"]
 [ext_resource type="Texture2D" uid="uid://ok04k5p0i7m7" path="res://art/tilemap_packed.png" id="1_fo2no"]
+[ext_resource type="Texture2D" uid="uid://mbsell5orj3j" path="res://icon.svg" id="3_yw4no"]
 
-[node name="Player" type="Node2D"]
-scale = Vector2(2, 2)
+[sub_resource type="CircleShape2D" id="CircleShape2D_wsrwq"]
+radius = 7.5
+
+[node name="Player" type="CharacterBody2D"]
+scale = Vector2(1.5, 1.5)
 script = ExtResource("1_42rfm")
-speed = 1.0
+speed = 35.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_fo2no")
 region_enabled = true
 region_rect = Rect2(32, 128, 16, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.5)
+shape = SubResource("CircleShape2D_wsrwq")
+
+[node name="Ray Group" type="Node2D" parent="."]
+
+[node name="Up Ray" type="RayCast2D" parent="Ray Group"]
+position = Vector2(2.08165e-12, -7.5)
+target_position = Vector2(24, 2.08165e-12)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Ray Group/Up Ray"]
+position = Vector2(12, 0.166668)
+scale = Vector2(0.185, 0.02)
+texture = ExtResource("3_yw4no")
+
+[node name="Bottom Ray" type="RayCast2D" parent="Ray Group"]
+position = Vector2(2.08165e-12, 7.5)
+target_position = Vector2(24, 2.08165e-12)
+
+[node name="Sprite2D" type="Sprite2D" parent="Ray Group/Bottom Ray"]
+position = Vector2(12, -0.166668)
+scale = Vector2(0.185, 0.02)
+texture = ExtResource("3_yw4no")

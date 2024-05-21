@@ -8,8 +8,8 @@
 [node name="Board" parent="." instance=ExtResource("1_j340u")]
 position = Vector2(48, 64)
 
-[node name="Player" parent="." node_paths=PackedStringArray("server_path") instance=ExtResource("2_lqo6b")]
+[node name="Player" parent="." node_paths=PackedStringArray("initial_path") instance=ExtResource("2_lqo6b")]
 position = Vector2(184, 328)
-server_path = NodePath("../Board/Path2D/PathFollow2D")
+initial_path = NodePath("../Board/H Path 1/PathFollow2D")
 
 [editable path="Board"]

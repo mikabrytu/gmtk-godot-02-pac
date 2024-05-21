@@ -19,3 +19,7 @@ region_rect = Rect2(32, 128, 16, 16)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_61eoi")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+target_position = Vector2(2.08165e-12, 16)
+collide_with_areas = true

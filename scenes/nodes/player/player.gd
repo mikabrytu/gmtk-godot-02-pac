@@ -13,7 +13,7 @@ var path: PathFollow2D
 func _ready():
 	direction = Vector2i.RIGHT
 	
-	_set_path(initial_path)
+	_set_path(initial_path, 0)
 	path.progress_ratio = 0.5
 	
 
@@ -27,9 +27,13 @@ func _physics_process(delta):
 
 #region Implementation
 
-func _set_path(new_path):
-	if (new_path != null):
+func _set_path(new_path, old_position):
+	if (new_path != null && new_path is PathFollow2D):
 		path = new_path
+		
+		if (old_position != 0):
+			path.progress = old_position - path.position.y
+		
 		reparent.call_deferred(path)
 	
 
@@ -53,7 +57,6 @@ func _get_direction() -> Vector2i:
 func _find_new_path():
 	if (ray.is_colliding()):
 		var parent: Path2D = ray.get_collider().get_parent()
-		var path = parent.get_node("PathFollow2D")
-		_set_path(path)
+		_set_path(parent.get_node("PathFollow2D"), path.position.y)
 
 #endregion

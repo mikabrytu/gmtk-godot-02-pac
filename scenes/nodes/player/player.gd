@@ -51,8 +51,9 @@ func _get_direction() -> Vector2i:
 	
 
 func _find_new_path():
-	print("What is colliding? " + str(ray.get_collider().name))
-	#if (ray.is_colliding()):
-	#	_set_path(ray.get_collider().get_parent())
+	if (ray.is_colliding()):
+		var parent: Path2D = ray.get_collider().get_parent()
+		var path = parent.get_node("PathFollow2D")
+		_set_path(path)
 
 #endregion

@@ -76,13 +76,12 @@ func _find_new_path(direction, ray):
 			progress = path.position.y - new_path.position.y
 		
 		if (direction == Vector2i.LEFT || direction == Vector2i.RIGHT):
-			var current_path_x = path.position.x
-			var new_path_x = new_path.position.x
-			var d = current_path_x - new_path_x
-			
-			print("Current Path X: " + str(current_path_x))
-			print("New Path X: " + str(new_path_x))
-			print("Progess: " + str(d))
+			#var current_path_x = path.position.x
+			#var new_path_x = new_path.position.x
+			#var d = current_path_x - new_path_x
+			#print("Current Path X: " + str(current_path_x))
+			#print("New Path X: " + str(new_path_x))
+			#print("Progess: " + str(d))
 			
 			progress = path.position.x - new_path.position.x
 		

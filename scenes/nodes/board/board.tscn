@@ -146,14 +146,14 @@ _data = {
 }
 point_count = 2
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_arahn"]
+radius = 7.0
+
 [sub_resource type="Curve2D" id="Curve2D_buseh"]
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 215, 216, 0, 0, 0, 0, 216, 282)
 }
 point_count = 2
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_arahn"]
-radius = 7.0
 
 [node name="Board" type="TileMap"]
 tile_set = SubResource("TileSet_nlwaq")
@@ -163,26 +163,35 @@ layer_0/tile_data = PackedInt32Array(0, 262145, 268435460, -65536, 131073, 1, -6
 layer_1/name = "Objects"
 layer_1/tile_data = PackedInt32Array(262148, 458753, 5, 393222, 524289, 6, 393220, 589825, 7, 393221, 655361, 5, 327684, 589825, 6, 458756, 655361, 6, 524292, 655361, 6, 262156, 655361, 6, 327692, 655361, 6, 983048, 131073, 6, 1114118, 458753, 6, 1114122, 524289, 6, 1114119, 655361, 5, 1114120, 655361, 5, 1114121, 655361, 5, 1179656, 262145, 5, 1245192, 327681, 5, 1179664, 327681, 5, 1179648, 327681, 5, 524295, 327681, 6, 524297, 327681, 6, 720905, 327681, 6, 720904, 327681, 6, 720903, 327681, 6, 720906, 393217, 6, 524298, 393217, 6, 720902, 262145, 6, 524294, 262145, 6, 393228, 720897, 5, 393226, 458753, 6, 524300, 524289, 5, 458764, 589825, 6, 393227, 655361, 5)
 
-[node name="Path2D" type="Path2D" parent="."]
+[node name="Path2D H" type="Path2D" parent="."]
 curve = SubResource("Curve2D_ryomd")
 
-[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
-position = Vector2(55, 263)
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D H"]
+position = Vector2(215.998, 264)
 rotation = 0.0062111
+progress = 161.0
 rotates = false
 loop = false
 
-[node name="Path2D2" type="Path2D" parent="."]
+[node name="Path Contact Area H" type="Area2D" parent="Path2D H"]
+position = Vector2(197, 264)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D H/Path Contact Area H"]
+shape = SubResource("CircleShape2D_arahn")
+debug_color = Color(0, 0.6, 0.701961, 0.419608)
+
+[node name="Path2D V" type="Path2D" parent="."]
 curve = SubResource("Curve2D_buseh")
 
-[node name="PathFollow2D" type="PathFollow2D" parent="Path2D2"]
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D V"]
 position = Vector2(215, 216)
 rotation = 1.55565
 rotates = false
 loop = false
 
-[node name="Path Contact Area" type="Area2D" parent="Path2D2"]
-position = Vector2(216, 264)
+[node name="Path Contact Area V" type="Area2D" parent="Path2D V"]
+position = Vector2(216, 281)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D2/Path Contact Area"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D V/Path Contact Area V"]
 shape = SubResource("CircleShape2D_arahn")
+debug_color = Color(0, 0.6, 0.701961, 0.419608)

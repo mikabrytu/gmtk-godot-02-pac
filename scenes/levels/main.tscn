@@ -9,7 +9,7 @@
 position = Vector2(48, 64)
 
 [node name="Player" parent="." node_paths=PackedStringArray("initial_path") instance=ExtResource("2_lqo6b")]
-position = Vector2(184, 328)
-initial_path = NodePath("../Board/Path2D/PathFollow2D")
+position = Vector2(183, 328)
+initial_path = NodePath("../Board/Path2D H/PathFollow2D")
 
 [editable path="Board"]

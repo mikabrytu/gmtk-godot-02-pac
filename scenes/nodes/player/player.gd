@@ -35,11 +35,11 @@ func _set_path(new_path):
 
 func _get_direction() -> Vector2i:
 	if (Input.is_action_just_pressed("action_up")):
-		direction = Vector2i.DOWN
+		direction = Vector2i.UP
 	
 	if (Input.is_action_just_pressed("action_down")):
 		_find_new_path()
-		direction = Vector2i.UP
+		direction = Vector2i.DOWN
 	
 	if (Input.is_action_just_pressed("action_left")):
 		direction = Vector2i.LEFT
@@ -51,7 +51,8 @@ func _get_direction() -> Vector2i:
 	
 
 func _find_new_path():
-	if (ray.is_colliding()):
-		_set_path(ray.get_collider().get_parent())
+	print("What is colliding? " + str(ray.get_collider().name))
+	#if (ray.is_colliding()):
+	#	_set_path(ray.get_collider().get_parent())
 
 #endregion

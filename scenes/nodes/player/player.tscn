@@ -22,4 +22,5 @@ shape = SubResource("RectangleShape2D_61eoi")
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
 target_position = Vector2(2.08165e-12, 16)
+hit_from_inside = true
 collide_with_areas = true

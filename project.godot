@@ -22,7 +22,7 @@ NodeProvider="*res://scripts/node_provider.gd"
 [display]
 
 window/size/viewport_width=736
-window/size/viewport_height=928
+window/size/viewport_height=864
 window/size/resizable=false
 window/stretch/scale=2.0
 

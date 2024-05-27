@@ -9,6 +9,7 @@ region = Rect2(16, 128, 16, 16)
 
 [node name="Player" type="Node2D"]
 script = ExtResource("1_kprpd")
+speed = 3.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = SubResource("AtlasTexture_8jgwo")

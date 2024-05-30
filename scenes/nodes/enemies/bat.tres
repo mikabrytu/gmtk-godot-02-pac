@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="EnemyRes" load_steps=4 format=3 uid="uid://conh7exqpmbi5"]
+
+[ext_resource type="Script" path="res://scripts/enemy_res.gd" id="1_subgb"]
+[ext_resource type="Texture2D" uid="uid://ok04k5p0i7m7" path="res://art/tilemap_packed.png" id="2_e5guw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kj3wj"]
+atlas = ExtResource("2_e5guw")
+region = Rect2(0, 160, 16, 16)
+
+[resource]
+script = ExtResource("1_subgb")
+name = "Bat"
+sprite = SubResource("AtlasTexture_kj3wj")

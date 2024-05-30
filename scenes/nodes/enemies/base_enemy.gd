@@ -25,7 +25,7 @@ func _ready():
 
 func _process(delta):
 	if (!movement.is_moving && !current_id_path.is_empty()):
-		if (resource.strategy == Constants.Strategy.TARGET):
+		if (resource.strategy == Constants.Strategy.TARGET || resource.strategy == Constants.Strategy.FRONT):
 			_find_target()
 		
 		var coord = board.local_to_map(global_position)
@@ -78,6 +78,11 @@ func _find_target():
 	
 	if (resource.strategy == Constants.Strategy.RANDOM):
 		target = board.map_to_local(walkable_tiles.pick_random())
+	
+	if (resource.strategy == Constants.Strategy.FRONT):
+		var player_coord = board.local_to_map(player.global_position)
+		var front_coord = player_coord + (player.direction * 3)
+		target = board.map_to_local(front_coord)
 	
 	var id_path = grid.get_id_path(
 		board.local_to_map(global_position),

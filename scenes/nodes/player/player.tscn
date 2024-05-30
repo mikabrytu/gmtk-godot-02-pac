@@ -21,4 +21,4 @@ texture = SubResource("AtlasTexture_8jgwo")
 shape = SubResource("RectangleShape2D_juye8")
 
 [node name="GridMovement2D" parent="." instance=ExtResource("3_snbk3")]
-speed = 2.0
+speed = 2.75

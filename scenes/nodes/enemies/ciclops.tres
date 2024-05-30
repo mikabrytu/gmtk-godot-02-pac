@@ -11,5 +11,5 @@ region = Rect2(16, 144, 16, 16)
 script = ExtResource("1_b0i26")
 name = "Ciclops"
 sprite = SubResource("AtlasTexture_657g7")
-speed = 1.25
+speed = 2.0
 strategy = 0

@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://yerpn1k87ymc"]
+[gd_scene load_steps=8 format=3 uid="uid://yerpn1k87ymc"]
 
 [ext_resource type="PackedScene" uid="uid://1x7cvpla8w4b" path="res://scenes/nodes/board/board.tscn" id="1_j340u"]
 [ext_resource type="PackedScene" uid="uid://cuhrmf06x3o3k" path="res://scenes/nodes/player/player.tscn" id="2_axngl"]
 [ext_resource type="PackedScene" uid="uid://dnduh25xxsage" path="res://scenes/controllers/coins_controller/coins_controller.tscn" id="3_urnhg"]
 [ext_resource type="Resource" uid="uid://conh7exqpmbi5" path="res://scenes/nodes/enemies/bat.tres" id="4_bfreu"]
 [ext_resource type="PackedScene" uid="uid://dtr3vwm7x1w0b" path="res://scenes/nodes/enemies/base_enemy.tscn" id="4_ggyld"]
+[ext_resource type="Resource" uid="uid://bn3rv4dkxdh3w" path="res://scenes/nodes/enemies/ghost.tres" id="5_lwbmf"]
 [ext_resource type="Resource" uid="uid://ccepplgxtnhsv" path="res://scenes/nodes/enemies/ciclops.tres" id="6_fm641"]
 
 [node name="Main" type="Node2D"]
@@ -14,6 +15,8 @@
 [node name="Player" parent="." instance=ExtResource("2_axngl")]
 position = Vector2(184, 248)
 
+[node name="CoinsController" parent="." instance=ExtResource("3_urnhg")]
+
 [node name="Bat" parent="." instance=ExtResource("4_ggyld")]
 position = Vector2(184, 200)
 resource = ExtResource("4_bfreu")
@@ -22,4 +25,6 @@ resource = ExtResource("4_bfreu")
 position = Vector2(184, 216)
 resource = ExtResource("6_fm641")
 
-[node name="CoinsController" parent="." instance=ExtResource("3_urnhg")]
+[node name="Ghost" parent="." instance=ExtResource("4_ggyld")]
+position = Vector2(168, 216)
+resource = ExtResource("5_lwbmf")

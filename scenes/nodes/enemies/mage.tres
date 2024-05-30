@@ -11,5 +11,5 @@ region = Rect2(48, 144, 16, 16)
 script = ExtResource("1_8wthc")
 name = "Mage"
 sprite = SubResource("AtlasTexture_rnbch")
-speed = 1.0
+speed = 2.0
 strategy = 2

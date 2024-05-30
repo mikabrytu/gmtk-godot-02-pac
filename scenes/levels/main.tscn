@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://yerpn1k87ymc"]
+[gd_scene load_steps=9 format=3 uid="uid://yerpn1k87ymc"]
 
 [ext_resource type="PackedScene" uid="uid://1x7cvpla8w4b" path="res://scenes/nodes/board/board.tscn" id="1_j340u"]
 [ext_resource type="PackedScene" uid="uid://cuhrmf06x3o3k" path="res://scenes/nodes/player/player.tscn" id="2_axngl"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dtr3vwm7x1w0b" path="res://scenes/nodes/enemies/base_enemy.tscn" id="4_ggyld"]
 [ext_resource type="Resource" uid="uid://bn3rv4dkxdh3w" path="res://scenes/nodes/enemies/ghost.tres" id="5_lwbmf"]
 [ext_resource type="Resource" uid="uid://ccepplgxtnhsv" path="res://scenes/nodes/enemies/ciclops.tres" id="6_fm641"]
+[ext_resource type="Resource" uid="uid://crf3v3xwb6uo2" path="res://scenes/nodes/enemies/mage.tres" id="7_6pajb"]
 
 [node name="Main" type="Node2D"]
 
@@ -28,3 +29,7 @@ resource = ExtResource("6_fm641")
 [node name="Ghost" parent="." instance=ExtResource("4_ggyld")]
 position = Vector2(168, 216)
 resource = ExtResource("5_lwbmf")
+
+[node name="Mage" parent="." instance=ExtResource("4_ggyld")]
+position = Vector2(200, 216)
+resource = ExtResource("7_6pajb")

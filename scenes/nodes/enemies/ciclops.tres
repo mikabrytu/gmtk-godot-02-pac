@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="EnemyRes" load_steps=4 format=3 uid="uid://ccepplgxtnhsv"]
+
+[ext_resource type="Script" path="res://scripts/enemy_res.gd" id="1_b0i26"]
+[ext_resource type="Texture2D" uid="uid://ok04k5p0i7m7" path="res://art/tilemap_packed.png" id="2_k5uxm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_657g7"]
+atlas = ExtResource("2_k5uxm")
+region = Rect2(16, 144, 16, 16)
+
+[resource]
+script = ExtResource("1_b0i26")
+name = "Ciclops"
+sprite = SubResource("AtlasTexture_657g7")
+speed = 1.25
+strategy = 0

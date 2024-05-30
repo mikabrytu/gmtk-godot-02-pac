@@ -11,3 +11,5 @@ region = Rect2(0, 160, 16, 16)
 script = ExtResource("1_subgb")
 name = "Bat"
 sprite = SubResource("AtlasTexture_kj3wj")
+speed = 1.25
+strategy = 3

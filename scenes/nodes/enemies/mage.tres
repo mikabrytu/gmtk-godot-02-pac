@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="EnemyRes" load_steps=4 format=3 uid="uid://crf3v3xwb6uo2"]
+
+[ext_resource type="Script" path="res://scripts/enemy_res.gd" id="1_8wthc"]
+[ext_resource type="Texture2D" uid="uid://ok04k5p0i7m7" path="res://art/tilemap_packed.png" id="2_j55qr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rnbch"]
+atlas = ExtResource("2_j55qr")
+region = Rect2(48, 144, 16, 16)
+
+[resource]
+script = ExtResource("1_8wthc")
+name = "Mage"
+sprite = SubResource("AtlasTexture_rnbch")
+speed = 1.0
+strategy = 2

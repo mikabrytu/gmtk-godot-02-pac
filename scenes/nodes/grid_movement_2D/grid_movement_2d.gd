@@ -58,4 +58,8 @@ func move(delta):
 	parent.global_position = Vector2(previous_position).lerp(target_position, time)
 	
 
+func set_speed(speed: float):
+	self.speed = speed
+	
+
 #endregion

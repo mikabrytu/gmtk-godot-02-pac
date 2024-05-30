@@ -15,4 +15,4 @@ position = Vector2(184, 248)
 [node name="CoinsController" parent="." instance=ExtResource("3_urnhg")]
 
 [node name="BaseEnemy" parent="." instance=ExtResource("4_ggyld")]
-position = Vector2(184, 168)
+position = Vector2(136, 168)

@@ -1,4 +1,4 @@
-extends Node2D
+class_name Player extends Node2D
 
 @onready var grid_movement: GridMovement2D = $GridMovement2D
 
@@ -6,6 +6,10 @@ var direction: Vector2i
 
 
 #region Godot Messages
+
+func _init():
+	NodeProvider.register(self)
+	
 
 func _ready():
 	direction = Vector2i.RIGHT

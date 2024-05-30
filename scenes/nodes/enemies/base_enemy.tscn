@@ -17,4 +17,4 @@ resource = ExtResource("2_fn8du")
 texture = SubResource("AtlasTexture_6a6x3")
 
 [node name="GridMovement2D" parent="." instance=ExtResource("4_ow4xe")]
-speed = 0.5
+speed = 1.0
